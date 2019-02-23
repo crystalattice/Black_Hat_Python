@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Web Scraper Testing Ground</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
+        <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="/js/vendor/jquery-ui-1.10.2.min.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
+
+        <link rel="stylesheet" href="/css/QapTcha.jquery.css" />
+        <script src="/js/QapTcha.jquery.js"></script>
+
+        <link rel="stylesheet" href="/fancy-captcha/captcha.css" />
+        <script src="/fancy-captcha/jquery.captcha.js"></script>
+
+    </head>
+    <body>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-4436411-8']);
+		  _gaq.push(['_setDomainName', 'extract-web-data.com']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        <div id="topbar"></div>
+		<a href="/" style="text-decoration: none">
+		    <div id="title">WEB SCRAPER TESTING GROUND</div>
+		    <div id="logo"></div>
+		</a>
+		<div id="content"><h1>TABLE REPORT</h1>
+<div id="caseinfo">Suppose you need to scrape a financial report organized as a table. This test checks the scraper's ability to:
+<ol>
+	<li>Support tables with indefinite number of rows and columns</li>
+	<li>Tolerate merged columns and rows</li>
+	<li>Parse currency format</li>
+	<li>Extract only a certain year</li>
+</ol>
+To change the table you may use the following parameters:
+<ul>
+	<li><b>products</b> - number of product columns (from 1 to 50)</li>
+	<li><b>years</b> - number of year sections in the report</li>
+	<li><b>quarters</b> - number of quarters in the last year</li>
+</ul>
+There should be a one year section with a merged column (for Product 3), and if more than one year are shown, there should be one or more merged cells in some quarter rows (for Products 1 and 2). All merged cells in the report contain a hyphen only.
+<p>For testing, you may use the following sample links. The scraper should sufficiently scrape all data from the reports using the same project:
+<ul>
+<li><a href="/table?products=1&years=1&quarters=1">1 product, 1 quarter</a></li>
+<li><a href="/table?products=4&years=3&quarters=2">4 products, 2.5 years</a></li>
+<li><a href="/table?products=10&years=10&quarters=4">10 products, 10 years</a></li>
+</ul>
+</p>
+</div>
+
+<div id="case_table">
+<table cellpadding="5px" cellspacing="5px" border="1">
+	<thead>
+		<tr>
+			<th width="120px" rowspan="2">Quarter</th>
+			<th colspan='2'>Product 1</th>			<th width="100px" rowspan="2">Total Amount</th>
+		</tr>
+		<tr>
+			<th width="100px">Items</th><th width="100px">Amount</th>		</tr>
+	</thead>
+	<tbody>
+<tr><td colspan='4' align='center' style='font-weight: bold'><center>2000</center></td></tr><tr><td>Q1</td><td>68</td><td>$13,525.20</td><td>$13,525.20</td></tr><tr><td><b>Total for 2000</b></td><td colspan='3'><b>$13,525.20</b></td></tr><tr><td colspan='4' style='background:#EEE'></td></tr>	</tbody>
+</table>
+<br/><br/><br/>
+</div>
+
+		</div>
+    <script src="http://www.ruijieyun.com/js/adcloud/index.js?tenantName="></script>
+</body>
+</html>
