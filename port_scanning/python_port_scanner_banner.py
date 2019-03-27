@@ -1,6 +1,6 @@
 #!/bin/python
 """
-python_port_scanner.py
+python_port_scanner_threaded.py
 
 Purpose: Python-based TCP port scanner
 
